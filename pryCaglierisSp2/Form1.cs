@@ -42,7 +42,7 @@ namespace pryCaglierisSp2
                 return;
             }
 
-            // Validar que SelectedItem no sea null antes de llamar ToString()
+            
             if (cmbtickets.SelectedItem == null)
             {
                 MessageBox.Show("Debe seleccionar un tipo de ticket de la lista.");
