@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
@@ -56,6 +57,21 @@ namespace pryCaglierisSp2
 
             txtNumeroTickets.Clear();
             txtNumeroTickets.Focus();
+            cmbtickets.SelectedIndex = -1;
+
+
+            StreamWriter writer = new StreamWriter("ventas.txt", true);
+            StreamWriter writer2 = new StreamWriter("ESASCOSITASRICASLASQUIERO.txt", true);
+
+            
+            writer.WriteLine(entrada);
+            writer.Close();
+            writer2.WriteLine(entrada);
+            writer2.Close();
+
+            
+
+
         }
 
         private void txtNumeroTickets_KeyPress(object sender, KeyPressEventArgs e)
